@@ -6,17 +6,19 @@
     <div class="row">
         <div class="col-md-12">
 
-                <div class="nav ue-clear" >
-                    <ul class="searchList" >
-                        <span class="searchItem current" data-type="v2ex">V2EX文章</span>
-                        <span class="searchItem" data-type="wx">微信公众号文章</span>
-                    </ul>
-                </div>
-                <div  class="input-group" >
-                    <input type="text" class="form-control h50" id="searchInput" name="query" placeholder="关键字..." value="{{ $q }}" autocomplete="off" HaoyuSug="4C664569809341CAA51AD59CBC052B13">
-                    <span class="input-group-btn" ><button class="btn btn-default h50 "  type="submit" type="button" onclick="add_search()"><span
-                                    class="glyphicon glyphicon-search"></span></button></span>
-                </div>
+            <div class="nav ue-clear">
+                <ul class="searchList">
+                    <span class="searchItem current" data-type="v2ex">V2EX文章</span>
+                    <span class="searchItem" data-type="wx">微信公众号文章</span>
+                </ul>
+            </div>
+            <div class="input-group">
+                <input type="text" class="form-control h50" id="searchInput" name="query" placeholder="关键字..."
+                       value="{{ $q }}" autocomplete="off" HaoyuSug="4C664569809341CAA51AD59CBC052B13">
+                <span class="input-group-btn"><button class="btn btn-default h50 " type="submit" type="button"
+                                                      onclick="add_search()"><span
+                                class="glyphicon glyphicon-search"></span></button></span>
+            </div>
         </div>
     </div>
     @if($q)
@@ -25,7 +27,9 @@
                 <div class="panel panel-default list-panel search-results">
                     <div class="panel-heading">
                         <h3 class="panel-title ">
-                            <i class="fa fa-search"></i> 关于 “<span style="color: red" class="highlight"><strong>{{ $q }}</strong></span>” 的搜索结果,
+                            <i class="fa fa-search"></i> 关于 “<span style="color: red"
+                                                                   class="highlight"><strong>{{ $q }}</strong></span>”
+                            的搜索结果,
                             共 {{ $paginator->total() }} 条
                         </h3>
                     </div>
@@ -44,14 +48,19 @@
                                         @endif
                                     </a>
                                 </h2>
-
-                                <div class="info">
-                                    <span class="label label-primary">微信公众号</span>
-                                    <span class="label label-success">{{ $post->wxname}}</span>
-                                    <span class="label label-default">作者：{{ $post->author}}</span>
-                                    <span class="label label-default">{{ $post->post_date}}</span>
-                                </div>
-
+                                @if ($type=="wx")
+                                    <div class="info">
+                                        <span class="label label-primary">微信公众号</span>
+                                        <span class="label label-success">{{ $post->wxname}}</span>
+                                        <span class="label label-default">作者：{{ $post->author}}</span>
+                                        <span class="label label-info">{{ $post->post_date}}</span>
+                                    </div>
+                                @else
+                                    <div class="info">
+                                        <span class="label label-success">{{ $post->created_date}}</span>
+                                        <span class="label label-info">{{ $post->comment_count}}</span>
+                                    </div>
+                                @endif
                                 <div class="desc">
                                     @if (isset($post->highlight['content']))
                                         @foreach ($post->highlight['content'] as $item)
@@ -90,9 +99,8 @@
                 <hr/>
                 <h2>你会搜索到什么？</h2>
                 <br>
-                <p><a href="#"><strong>人民日报</strong></a>&nbsp;公众号文章</p>
-                <p><a href="#"><strong>网易新闻</strong></a>&nbsp;公众号文章</p>
-                <p><a href="#"><strong>V2EX</strong></a>&nbsp;技术社区站内搜索</p>
+                <p><a href="#"><strong>人民日报&nbsp;网易新闻</strong></a>&nbsp;公众号文章</p>
+                <p><a href="#"><strong>V2EX</strong></a>&nbsp;技术社区</p>
                 <br/>
                 <h4><strong><em>可直接搜微信文章，微信公众号，或V2EX技术社区内容</em></strong></h4>
             </div>

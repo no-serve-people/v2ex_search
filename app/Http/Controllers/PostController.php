@@ -22,7 +22,7 @@ class PostController extends Controller
             }
         }
 
-        return view('search', compact('paginator', 'q'));
+        return view('search', compact('paginator', 'q','type'));
     }
 
     public function rmrb_index()
