@@ -68,6 +68,13 @@
         <div class="row text-center">
             <div class="col-md-12">
                 <br/>
+                <p class="hot mysearch">
+                    <label>热门搜索：</label>
+                    <span class="hot-search">
+                        {{--<a href="javascript:;">互联网</a>--}}
+                    </span>
+
+                </p>
                 <p class="history mysearch">
                     <label>搜索历史：</label>
                     <span class="all-search">
@@ -80,9 +87,9 @@
                 <br>
                 <p><a href="#"><strong>人民日报</strong></a>&nbsp;公众号文章</p>
                 <p><a href="#"><strong>网易新闻</strong></a>&nbsp;公众号文章</p>
-                <p><a href="#"><strong>联合早报</strong></a>&nbsp;公众号文章，新加坡媒体眼中的中国</p>
+                <p><a href="#"><strong>V2EX</strong></a>&nbsp;技术社区站内搜索</p>
                 <br/>
-                <h4><strong><em>可直接搜文章，或微信公众号</em></strong></h4>
+                <h4><strong><em>可直接搜微信文章，微信公众号，或V2EX技术社区内容</em></strong></h4>
             </div>
         </div>
     @endif

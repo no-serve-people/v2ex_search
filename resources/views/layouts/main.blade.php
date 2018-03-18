@@ -75,10 +75,10 @@
                 <hr>
                 <p class="text-center"><a href="http://www.your-me.cn" target="_blank">©等车的猪</a>&nbsp;&nbsp; |&nbsp;&nbsp;<strong>氢搜索</strong>
                     &nbsp;&nbsp;|&nbsp;&nbsp; <a
-                            href="http://www.github.com/ixingjue" target="_blank"><span style="color:red;"
+                            href="http://www.github.com/ixingjue/zmu_search" target="_blank"><span style="color:red;"
                                                                                         class="glyphicon glyphicon-hand-right"
                                                                                         aria-hidden="true"></span>
-                        毕业设计GitHub</a></p>
+                        毕业设计GitHub,欢迎<span style="color: red;">Star</span></a></p>
             </div>
         </div>
     </footer>
