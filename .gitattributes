@@ -2,4 +2,7 @@
 *.css linguist-vendored
 *.scss linguist-vendored
 *.js linguist-vendored
+*.js linguist-language=laravel
+*.css linguist-language=laravel
+*.html linguist-language=laravel
 CHANGELOG.md export-ignore
