@@ -5,13 +5,18 @@
 
     <div class="row">
         <div class="col-md-12">
-            <form action="/search">
+
+                <div class="nav ue-clear" >
+                    <ul class="searchList" >
+                        <span class="searchItem current" data-type="v2ex">V2EX文章</span>
+                        <span class="searchItem" data-type="wx">微信公众号文章</span>
+                    </ul>
+                </div>
                 <div  class="input-group" >
                     <input type="text" class="form-control h50" id="searchInput" name="query" placeholder="关键字..." value="{{ $q }}" autocomplete="off" HaoyuSug="4C664569809341CAA51AD59CBC052B13">
                     <span class="input-group-btn" ><button class="btn btn-default h50 "  type="submit" type="button" onclick="add_search()"><span
                                     class="glyphicon glyphicon-search"></span></button></span>
                 </div>
-            </form>
         </div>
     </div>
     @if($q)

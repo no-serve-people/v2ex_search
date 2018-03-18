@@ -10,12 +10,16 @@ class PostController extends Controller
 {
     public function search(Request $request)
     {
-        //todo:加入索引判断功能
         $q = $request->get('query');
+        $type = $request->get('s_type');
         $paginator = [];
         if ($q) {
-            $paginator = Post::search($q)->paginate(3);
-            $paginator = V2ex::search($q)->paginate(3);
+            if ($type == "wx") {
+                $paginator = Post::search($q)->paginate(3);
+            }
+            else{
+                $paginator = V2ex::search($q)->paginate(3);
+            }
         }
 
         return view('search', compact('paginator', 'q'));

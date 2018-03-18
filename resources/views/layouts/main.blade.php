@@ -89,6 +89,13 @@
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/global.js"></script>
 <script>
+    var search_url = "/search/"
+    //searchlist列表切换
+    $('.searchList').on('click', '.searchItem', function () {
+        $('.searchList .searchItem').removeClass('current');
+        $(this).addClass('current');
+    });
+
     function removeByValue(arr, val) {
         for (var i = 0; i < arr.length; i++) {
             if (arr[i] == val) {
@@ -119,7 +126,7 @@
             //然后再把搜索内容显示出来
             MapSearchArr();
         }
-        // window.location.href = search_url + '?q=' + val + "&s_type=" + $(".searchItem.current").attr('data-type')
+        window.location.href = search_url + '?query=' + val + "&s_type=" + $(".searchItem.current").attr('data-type')
     }
 
     function MapSearchArr() {
