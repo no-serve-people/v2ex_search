@@ -21,6 +21,11 @@ class Post extends Model
 {
     use Searchable, EsSearchable;
     protected $table = 'posts';
+    //定义索引里面type值
+    /*public function searchableAs()
+    {
+        return "post";
+    }*/
     protected $fillable = [
         'url',
         'author',
@@ -30,6 +35,7 @@ class Post extends Model
         'wxname',
     ];
 
+    //定义哪些字段需要搜索
     public function toSearchableArray()
     {
         return [
