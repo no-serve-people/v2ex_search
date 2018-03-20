@@ -14,7 +14,7 @@ class V2ex extends Model
     //定义索引里面type值
     public function searchableAs()
     {
-        return "v2exs";
+        return "v2exs_2";
     }
 
 

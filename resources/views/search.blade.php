@@ -59,10 +59,8 @@
                                     <div class="info">
                                        {{-- <span class="label label-success">{{ $post->created_date}}</span>
                                         <span class="label label-info">评论数:{{ $post->comment_count}}</span>--}}
-                                        <span class="label label-primary">作者</span>
-                                        <span class="label label-success">时间</span>
-                                        <span class="label label-default">点击数</span>
-                                        <span class="label label-info">评论数</span>
+                                        <span class="label label-primary">{{ $post->info}}</span>
+                                        <span class="label label-success">评论数{{ $post->comment_count}}</span>
                                     </div>
                                 @endif
                                 <div class="desc">
