@@ -27,10 +27,10 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <nav class="navbar navbar-default" >
+                <nav class="navbar navbar-default">
                     <div class="container-fluid">
                         <!-- Brand and toggle get grouped for better mobile display -->
-                        <div class="navbar-header" >
+                        <div class="navbar-header">
                             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                                     data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                                 <span class="sr-only">navigation</span>
@@ -38,7 +38,7 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
-                            <a class="navbar-brand"  href="/search"><strong>氢搜索</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--专注于微信公众号搜索
+                            <a class="navbar-brand" href="/search"><strong>氢搜索</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--不为人民服务
                             </a>
 
                         </div>
@@ -49,6 +49,9 @@
                                 <li><a>|</a></li>
                                 <li><a href="/about">关于</a></li>
                                 <li><a>|</a></li>
+                                <li><a href="http://118.25.27.146:5000/">爬虫管理</a></li>
+                                <li><a>|</a></li>
+
                                 <li><a href="/admin/dashboard">个人中心</a></li>
                             </ul>
                         </div><!-- /.navbar-collapse -->
@@ -56,10 +59,11 @@
                 </nav>
             </div>
         </div>
-        @yield('content')
-        <!--旁边框加入分享 -->
+    @yield('content')
+    <!--旁边框加入分享 -->
         <div class="side-bar">
-            <a href="http://wpa.qq.com/msgrd?v=3&uin=826739558&site=qq&menu=yes" class="icon-qq" title="向作者发起会话">向作者发起会话</a>
+            <a href="http://wpa.qq.com/msgrd?v=3&uin=826739558&site=qq&menu=yes" class="icon-qq"
+               title="向作者发起会话">向作者发起会话</a>
             <a href="#" class="icon-chat" title="联系作者">微信
                 <div class="chat-tips"><i></i>
                     <img style="width:138px;height:138px;" src="img/wechat.jpg" alt="扫一扫加我微信"></div>
@@ -73,12 +77,12 @@
         <div class="row">
             <div class="col-md-12">
                 <hr>
-                <p class="text-center"><a href="http://www.your-me.cn" target="_blank">©等车的猪</a>&nbsp;&nbsp; |&nbsp;&nbsp;<strong>氢搜索</strong>
+                <p class="text-center"><a href="http://www.your-me.cn" target="_blank">©不为人民服务</a>&nbsp;&nbsp; |&nbsp;&nbsp;<strong>氢搜索</strong>
                     &nbsp;&nbsp;|&nbsp;&nbsp; <a
                             href="http://www.github.com/ixingjue/zmu_search" target="_blank"><span style="color:red;"
-                                                                                        class="glyphicon glyphicon-hand-right"
-                                                                                        aria-hidden="true"></span>
-                        毕业设计GitHub,欢迎<span style="color: red;">Star</span></a></p>
+                                                                                                   class="glyphicon glyphicon-hand-right"
+                                                                                                   aria-hidden="true"></span>
+                        毕业设计GitHub,欢迎<span style="color: darkred;">Star</span></a></p>
             </div>
         </div>
     </footer>
@@ -104,6 +108,7 @@
             }
         }
     }
+
     var searchArr;
     //定义一个search的，判断浏览器有无数据存储（搜索历史）
     if (localStorage.search) {
