@@ -49,7 +49,7 @@
                                 <li><a>|</a></li>
                                 <li><a href="/about">关于</a></li>
                                 <li><a>|</a></li>
-                                <li><a href="http://118.25.27.146:5000/">爬虫管理</a></li>
+                                <li><a href="http://118.25.27.146:5000/" target="_blank">爬虫管理</a></li>
                                 <li><a>|</a></li>
 
                                 <li><a href="/admin/dashboard">个人中心</a></li>
@@ -82,7 +82,7 @@
                             href="http://www.github.com/ixingjue/zmu_search" target="_blank"><span style="color:red;"
                                                                                                    class="glyphicon glyphicon-hand-right"
                                                                                                    aria-hidden="true"></span>
-                        毕业设计GitHub,欢迎<span style="color: darkred;">Star</span></a></p>
+                        毕业设计GitHub,欢迎<span style="color: red;">Star</span></a></p>
             </div>
         </div>
     </footer>

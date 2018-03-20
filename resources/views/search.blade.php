@@ -57,8 +57,12 @@
                                     </div>
                                 @else
                                     <div class="info">
-                                        <span class="label label-success">{{ $post->created_date}}</span>
-                                        <span class="label label-info">评论数:{{ $post->comment_count}}</span>
+                                       {{-- <span class="label label-success">{{ $post->created_date}}</span>
+                                        <span class="label label-info">评论数:{{ $post->comment_count}}</span>--}}
+                                        <span class="label label-primary">作者</span>
+                                        <span class="label label-success">时间</span>
+                                        <span class="label label-default">点击数</span>
+                                        <span class="label label-info">评论数</span>
                                     </div>
                                 @endif
                                 <div class="desc">
@@ -67,7 +71,7 @@
                                             ......{!! $item !!}......
                                         @endforeach
                                     @else
-                                        {{ mb_substr($post->content, 0, 150) }}......
+                                        {{ mb_substr(strip_tags($post->content), 0, 150) }}......
                                     @endif
                                 </div>
                                 <hr>
