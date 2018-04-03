@@ -52,7 +52,7 @@
                                 <li><a href="http://118.25.27.146:5000/" target="_blank">爬虫管理</a></li>
                                 <li><a>|</a></li>
 
-                                <li><a href="/admin/dashboard">个人中心</a></li>
+                                <li><a href="/admin/dashboard" target="_blank">个人中心</a></li>
                             </ul>
                         </div><!-- /.navbar-collapse -->
                     </div><!-- /.container-fluid -->
