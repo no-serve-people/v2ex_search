@@ -15,9 +15,11 @@ class PostController extends Controller
         $paginator = [];
         if ($q) {
             if ($type == "wx") {
+                //微信公众号
                 $paginator = Post::search($q)->paginate(3);
             }
             else{
+                //V2ex按照时间排序
                 $paginator = V2ex::search($q)->paginate(3);
             }
         }
