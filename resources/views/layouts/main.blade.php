@@ -38,7 +38,7 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
-                            <a class="navbar-brand" href="/search"><strong>氢搜索</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--不为人民服务
+                            <a class="navbar-brand" href="/search"><strong>氢搜索</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--为人民服务
                             </a>
 
                         </div>
@@ -77,7 +77,7 @@
         <div class="row">
             <div class="col-md-12">
                 <hr>
-                <p class="text-center"><a href="http://www.your-me.cn" target="_blank">©不为人民服务</a>&nbsp;&nbsp; |&nbsp;&nbsp;<strong>氢搜索</strong>
+                <p class="text-center"><a href="http://www.your-me.cn" target="_blank">©等车的猪</a>&nbsp;&nbsp; |&nbsp;&nbsp;<strong>氢搜索</strong>
                     &nbsp;&nbsp;|&nbsp;&nbsp; <a
                             href="http://www.github.com/ixingjue/zmu_search" target="_blank"><span style="color:red;"
                                                                                                    class="glyphicon glyphicon-hand-right"
@@ -143,7 +143,7 @@
             arrLen = searchArr.length
         }
         for (var i = 0; i < arrLen; i++) {
-            tmpHtml += '<a href="' + '?query=' + searchArr[i] + '">' + searchArr[i] + '</a>&nbsp;&nbsp;'
+            tmpHtml += '<a style="color: #ff2f00" href="' + '?query=' + searchArr[i] + '">' + searchArr[i] + '</a>&nbsp;&nbsp;'
             // tmpHtml += 'searchArr[i]'
         }
         $(".mysearch .all-search").html(tmpHtml);

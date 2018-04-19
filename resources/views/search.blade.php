@@ -94,6 +94,7 @@
                 <p class="history mysearch">
                     <label>搜索历史：</label>
                     <span class="all-search">
+                    {{--<span style="color: red">--}}
                         {{--<a href="javascript:;">互联网</a>--}}
                     </span>
 
