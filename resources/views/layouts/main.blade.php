@@ -38,7 +38,7 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
-                            <a class="navbar-brand" href="/search"><strong>氢搜索</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--为人民服务
+                            <a class="navbar-brand" href="/search"><strong>氢搜索</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;你身边的搜索专家
                             </a>
 
                         </div>
