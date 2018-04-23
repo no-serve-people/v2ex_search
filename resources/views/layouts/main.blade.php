@@ -49,7 +49,7 @@
                                 <li><a>|</a></li>
                                 <li><a href="/about">关于</a></li>
                                 <li><a>|</a></li>
-                                <li><a href="http://118.25.27.146:5000/" target="_blank">爬虫管理</a></li>
+                                <li><a href="https://py.kx-childe.cn/" target="_blank">爬虫管理</a></li>
                                 <li><a>|</a></li>
 
                                 <li><a href="/admin/dashboard" target="_blank">个人中心</a></li>
