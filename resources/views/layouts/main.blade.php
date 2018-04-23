@@ -131,6 +131,10 @@
             //然后再把搜索内容显示出来
             MapSearchArr();
         }
+    /*    $('.searchList').on('click', '.searchItem', function () {
+            $('.searchList .searchItem').removeClass('current');
+            $(this).addClass('current');
+        });*/
         window.location.href = search_url + '?query=' + val + "&s_type=" + $(".searchItem.current").attr('data-type')
     }
 

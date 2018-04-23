@@ -8,7 +8,7 @@
 
             <div class="nav ue-clear">
                 <ul class="searchList">
-                    <span class="searchItem current" data-type="v2ex">V2EX文章</span>
+                    <span class="searchItem  current" data-type="v2ex">V2EX帖子</span>
                     <span class="searchItem" data-type="wx">微信公众号文章</span>
                 </ul>
             </div>
