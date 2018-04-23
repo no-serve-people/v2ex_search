@@ -3,7 +3,7 @@
     <div id="particles" class="home-color-bg"></div>
     <div class="home-box">
         <h2 title="{{ $site_title or 'title' }}" style="margin: 0;">
-            {{ $site_title or '毕业设计' }}
+            {{ $site_title or '空虚公子' }}
             <a aria-hidden="true" href="">
                 <img class="img-circle"
                      src="{{ $avatar or 'https://raw.githubusercontent.com/lufficc/images/master/Xblog/logo.png' }}"
@@ -31,7 +31,7 @@
                      <i class="fa fa-{{ $value['icon'] }} fa-fw" title="{{ ucfirst($key) }}"></i>
                  </a>
              @endforeach--}}
-            <a>学而时习之 不亦乐乎</a>
+            <a>精神，思想的贫穷注定了荒诞，空虚的一生。</a>
         </p>
     </div>
 @endsection
