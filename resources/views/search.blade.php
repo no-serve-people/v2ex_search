@@ -103,9 +103,9 @@
                 <h2>你会搜索到什么？</h2>
                 <br>
                 <p><a href="http://www.people.com.cn/" target="_blank"><strong>人民日报&nbsp;</strong></a><a href="http://news.163.com/" target="_blank"><strong>网易新闻</strong></a>&nbsp;公众号文章</p>
-                <p><a href="https://www.v2ex.com/" target="_blank"><strong>V2EX</strong></a>&nbsp;技术社区</p>
+                <p><a href="https://www.v2ex.com/" target="_blank"><strong>V2EX</strong></a>&nbsp;社区帖子</p>
                 <br/>
-                <h4><strong><em>可直接搜微信文章，微信公众号，或V2EX技术社区内容</em></strong></h4>
+                <h4><strong><em>可直接搜微信文章，微信公众号，文章作者，或V2EX社区内容</em></strong></h4>
             </div>
         </div>
     @endif
