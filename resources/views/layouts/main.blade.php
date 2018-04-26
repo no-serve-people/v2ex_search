@@ -46,13 +46,14 @@
                             <ul class="nav navbar-nav">
                                 <li><a>|</a></li>
                                 <li><a href="/rmrb"><strong>人民日报</strong> 全部文章</a></li>
-                                <li><a>|</a></li>
-                                <li><a href="/about">关于</a></li>
+
                                 <li><a>|</a></li>
                                 <li><a href="https://py.kx-childe.cn/" target="_blank">爬虫管理</a></li>
                                 <li><a>|</a></li>
 
                                 <li><a href="/admin/dashboard" target="_blank">个人中心</a></li>
+                                <li><a>|</a></li>
+                                <li><a href="/about">关于</a></li>
                             </ul>
                         </div><!-- /.navbar-collapse -->
                     </div><!-- /.container-fluid -->

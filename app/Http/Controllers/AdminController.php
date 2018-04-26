@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\User;
-/*use App\Model\Post;
-use App\Model\Gallery;*/
+use App\Post;
+use App\V2ex;
+//use App\Model\Gallery;
 
 use Illuminate\Http\Request;
 use DB;
@@ -15,15 +16,16 @@ use Gate;
 
 class AdminController extends Controller
 {
-    
+
     //仪表盘
     public function getDashboard()
     {
         $user_count = User::all()->count();
-        /*        $post_count = Post::all()->count();
-                $photography_count = Gallery::all()->count();
-                return view('admin.dashboard', ['user_count' => $user_count, 'post_count' => $post_count, 'photography_count' => $photography_count]);*/
-        return view('admin.dashboard', ['user_count' => $user_count]);
+        $post_count = Post::all()->count();
+        $v2ex_count = V2ex::all()->count();
+        /*   $photography_count = Gallery::all()->count();
+             return view('admin.dashboard', ['user_count' => $user_count, 'post_count' => $post_count, 'photography_count' => $photography_count]);*/
+        return view('admin.dashboard', ['user_count' => $user_count, 'post_count' => $post_count,'v2ex_count' => $v2ex_count]);
     }
 
     //用户列表

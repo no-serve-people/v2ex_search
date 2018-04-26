@@ -493,28 +493,50 @@
             <div class="xe-icon">
                 <i class="linecons-cloud"></i>
             </div>
-            <div class="xe-label">
+           {{-- <div class="xe-label">
                 <strong class="num">0个</strong>
                 <span>爬虫总数</span>
-            </div>
+            </div>--}}
         </div>
 
-        <div class="xe-widget xe-counter xe-counter-orange" data-count=".num" data-from="0" data-to="" data-suffix="个" data-duration="2">
+        <div class="xe-widget xe-counter xe-counter-blue" data-count=".num" data-from="0" data-to="{{ $post_count }}" data-suffix="个" data-duration="2" data-easing="false">
             <div class="xe-icon">
                 <i class="linecons-globe"></i>
             </div>
             <div class="xe-label">
                 <strong class="num">0个</strong>
-                <span>人民日报公众号数据量</span>
+                <span>微信爬虫数据量</span>
             </div>
         </div>
+
+        <div class="xe-widget xe-counter xe-counter-purple" data-count=".num" data-from="0" data-to="{{ $v2ex_count }}" data-suffix="个" data-duration="2" data-easing="false">
+            <div class="xe-icon">
+                <i class="linecons-globe"></i>
+            </div>
+            <div class="xe-label">
+                <strong class="num">0个</strong>
+                <span>v2ex数据量</span>
+            </div>
+        </div>
+
+          <div class="xe-widget xe-counter xe-counter-orange" data-count=".num" data-from="0" data-to="{{ $cate_count }}" data-suffix="个" data-duration="2" data-easing="false">
+            <div class="xe-icon">
+                <i class="linecons-globe"></i>
+            </div>
+            <div class="xe-label">
+                <strong class="num">0个</strong>
+                <span>微信公众号类别</span>
+            </div>
+        </div>
+
+
 
         <div class="xe-widget xe-counter xe-counter-pink" data-count=".num" data-from="1" data-to="{{ $user_count }}" data-suffix="名" data-duration="3" data-easing="false">
             <div class="xe-icon">
                 <i class="linecons-user"></i>
             </div>
             <div class="xe-label">
-                <strong class="num">1名</strong>
+                <strong class="num">0名</strong>
                 <span>用户数量</span>
             </div>
         </div>
