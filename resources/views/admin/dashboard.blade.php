@@ -489,19 +489,28 @@
 <div class="row">
     <div class="col-sm-12">
 
-        <div class="xe-widget xe-counter" data-count=".num" data-from="0" data-to="" data-suffix="个" data-duration="2">
+      {{--  <div class="xe-widget xe-counter" data-count=".num" data-from="0" data-to="" data-suffix="个" data-duration="2">
             <div class="xe-icon">
                 <i class="linecons-cloud"></i>
             </div>
-           {{-- <div class="xe-label">
+           --}}{{-- <div class="xe-label">
                 <strong class="num">0个</strong>
                 <span>爬虫总数</span>
-            </div>--}}
+            </div>--}}{{--
+        </div>--}}
+        <div class="xe-widget xe-counter xe-counter-orange" data-count=".num" data-from="0" data-to="{{ $cate_count }}" data-suffix="个" data-duration="2" data-easing="false">
+            <div class="xe-icon">
+                <i class="linecons-globe"></i>
+            </div>
+            <div class="xe-label">
+                <strong class="num">0个</strong>
+                <span>微信公众号类别</span>
+            </div>
         </div>
 
         <div class="xe-widget xe-counter xe-counter-blue" data-count=".num" data-from="0" data-to="{{ $post_count }}" data-suffix="个" data-duration="2" data-easing="false">
             <div class="xe-icon">
-                <i class="linecons-globe"></i>
+                <i class="linecons-cloud"></i>
             </div>
             <div class="xe-label">
                 <strong class="num">0个</strong>
@@ -511,7 +520,7 @@
 
         <div class="xe-widget xe-counter xe-counter-purple" data-count=".num" data-from="0" data-to="{{ $v2ex_count }}" data-suffix="个" data-duration="2" data-easing="false">
             <div class="xe-icon">
-                <i class="linecons-globe"></i>
+                <i class="linecons-cd"></i>
             </div>
             <div class="xe-label">
                 <strong class="num">0个</strong>
@@ -519,15 +528,7 @@
             </div>
         </div>
 
-          <div class="xe-widget xe-counter xe-counter-orange" data-count=".num" data-from="0" data-to="{{ $cate_count }}" data-suffix="个" data-duration="2" data-easing="false">
-            <div class="xe-icon">
-                <i class="linecons-globe"></i>
-            </div>
-            <div class="xe-label">
-                <strong class="num">0个</strong>
-                <span>微信公众号类别</span>
-            </div>
-        </div>
+
 
 
 

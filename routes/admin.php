@@ -9,6 +9,7 @@ Route::get('password/email', 'PasswordController@getEmail');
 Route::post('password/email', 'PasswordController@postEmail');
 //后台登录验证组
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
+
     Route::get('user', 'AdminController@getUser');
     Route::get('dashboard', 'AdminController@getDashboard');
     Route::get('useredit/{id}', 'AdminController@getUserEdit');

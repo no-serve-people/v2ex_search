@@ -292,21 +292,21 @@
                 <li>
                     <a href="{{ url('admin/postadd') }}">
                         <i class="fa-edit"></i>
-                        发表文章
+                        添加友链
                     </a>
                 </li>
                 @endif
                 <li>
                     <a href="{{ url('admin/profile') }}">
                         <i class="fa-wrench"></i>
-                        设置
+                        个人信息设置
                     </a>
                 </li>
                 @if(Auth::user()->auth != 0)
                 <li>
                     <a href="{{ url('admin/uploadFile') }}">
                         <i class="fa-user"></i>
-                        发布摄影
+                        Seo设置
                     </a>
                 </li>
                 @endif

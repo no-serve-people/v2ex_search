@@ -6,7 +6,6 @@ use App\User;
 use App\Post;
 use App\V2ex;
 //use App\Model\Gallery;
-
 use Illuminate\Http\Request;
 use DB;
 use Illuminate\Support\Facades\Auth;
@@ -22,10 +21,10 @@ class AdminController extends Controller
     {
         $user_count = User::all()->count();
         $post_count = Post::all()->count();
-        $v2ex_count = V2ex::all()->count();
-        /*   $photography_count = Gallery::all()->count();
-             return view('admin.dashboard', ['user_count' => $user_count, 'post_count' => $post_count, 'photography_count' => $photography_count]);*/
-        return view('admin.dashboard', ['user_count' => $user_count, 'post_count' => $post_count,'v2ex_count' => $v2ex_count]);
+        //获取微信公众号类别数
+        $cate_count = Post::distinct('wxname')->count('wxname');
+        $v2ex_count = V2ex::count('id');
+        return view('admin.dashboard', ['user_count' => $user_count, 'post_count' => $post_count, 'cate_count' => $cate_count, 'v2ex_count' => $v2ex_count]);
     }
 
     //用户列表
@@ -69,7 +68,6 @@ class AdminController extends Controller
     //图片上传
     public function upload(Request $request)
     {
-
 
         file_put_contents('adki', var_export('222222', true), FILE_APPEND);
         $maxFileAge = 5 * 3600; // Temp file age in seconds
