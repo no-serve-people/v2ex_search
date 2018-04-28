@@ -14,6 +14,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('dashboard', 'AdminController@getDashboard');
     Route::get('useredit/{id}', 'AdminController@getUserEdit');
     Route::post('authsave', 'AdminController@setUserAuth');
+    //ip路由
+    Route::get('/ips', ['uses' => 'AdminController@ips', 'as' => 'admin.ips']);
 
     //个人中心
     Route::get('profile', 'UserController@index');
@@ -33,6 +35,11 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('seo', 'SeoController@index');
     Route::post('seo/save', 'SeoController@save');
     Route::get('seo/edit', 'SeoController@edit');
+    /**
+     * IPS
+     */
+    Route::delete('/ip/{ip}/toggle', ['uses' => 'IpController@toggleBlock', 'as' => 'ip.block']);
+    Route::delete('/ip/{ip}', ['uses' => 'IpController@destroy', 'as' => 'ip.delete']);
     // 密码重置路由
     Route::get('password/reset/{token}', 'Auth\PasswordController@getReset');
     Route::post('password/reset', 'Auth\PasswordController@postReset');

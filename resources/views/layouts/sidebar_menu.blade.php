@@ -129,7 +129,7 @@
                 </a>
                 <ul>
                     <li class="active">
-                        <a href="{{ url('admin/ip') }}">
+                        <a href="{{ url('admin/ips') }}">
                             <span class="title">IP地址</span>
                         </a>
                     </li>

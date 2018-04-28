@@ -514,7 +514,7 @@
             </div>
             <div class="xe-label">
                 <strong class="num">0个</strong>
-                <span>微信爬虫数据量</span>
+                <span>微信文章数据量</span>
             </div>
         </div>
 

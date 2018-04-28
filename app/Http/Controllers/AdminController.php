@@ -5,12 +5,12 @@ namespace App\Http\Controllers;
 use App\User;
 use App\Post;
 use App\V2ex;
-//use App\Model\Gallery;
 use Illuminate\Http\Request;
 use DB;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests;
 use Gate;
+use App\Ip;
 
 
 class AdminController extends Controller
@@ -63,6 +63,11 @@ class AdminController extends Controller
         $user->auth = $auth;
         $user->save();
         return redirect('admin/user');
+    }
+    public function ips(Request $request)
+    {
+        $ips = Ip::withoutGlobalScopes()->with(['user'])->orderBy('user_id', 'id')->paginate(5);
+        return view('admin.ips', compact('ips'));
     }
 
     //图片上传
