@@ -42,6 +42,11 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::delete('/ip/{ip}', ['uses' => 'IpController@destroy', 'as' => 'ip.delete']);
     /*Route::delete('/ip/{ip}/toggle', 'IpController@toggleBlock')->name('ip.block');
     Route::delete('/ip/{ip}', 'IpController@destroy')->name('ip.delete');*/
+    /**
+     * 搜索历史记录
+     */
+    Route::get('history', 'AdminController@history');
+    Route::get('historydel', 'AdminController@historydel');
     // 密码重置路由
     Route::get('password/reset/{token}', 'Auth\PasswordController@getReset');
     Route::post('password/reset', 'Auth\PasswordController@postReset');

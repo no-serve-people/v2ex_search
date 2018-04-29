@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Post;
 use App\V2ex;
 use Illuminate\Http\Request;
-
 class PostController extends Controller
 {
     public function search(Request $request)
@@ -14,6 +13,12 @@ class PostController extends Controller
         $type = $request->get('s_type');
         $paginator = [];
         if ($q) {
+            //保存搜索记录
+            $user_id=\Auth::id();
+            $type=$type;
+            \DB::table('searchistory')->insert(
+                ['history' => $q, 'user_id' => $user_id,'type' => $type,'created_at'=>now()]
+            );
             if ($type == "wx") {
                 //微信公众号
                 $paginator = Post::search($q)->paginate(3);

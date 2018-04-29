@@ -108,19 +108,19 @@
                 </ul>
             </li>
 
-          {{--  <li>
+            <li>
                 <a href="#">
                     <i class="linecons-search"></i>
                     <span class="title">搜索</span>
                 </a>
                 <ul>
                     <li class="active">
-                        <a href="{{ url('admin/search') }}">
+                        <a href="{{ url('admin/history') }}">
                             <span class="title">搜索记录</span>
                         </a>
                     </li>
                 </ul>
-            </li>--}}
+            </li>
 
             <li>
                 <a href="#">

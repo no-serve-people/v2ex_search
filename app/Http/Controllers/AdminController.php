@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Searchistory;
 use App\User;
 use App\Post;
 use App\V2ex;
 use Illuminate\Http\Request;
 use DB;
 use Illuminate\Support\Facades\Auth;
+Use Illuminate\Support\Facades\Input;
 use App\Http\Requests;
 use Gate;
 use App\Ip;
@@ -64,10 +66,39 @@ class AdminController extends Controller
         $user->save();
         return redirect('admin/user');
     }
+
     public function ips(Request $request)
     {
+        //todo:  ip  待做
         $ips = Ip::withoutGlobalScopes()->with(['user'])->orderBy('user_id', 'id')->paginate(5);
         return view('admin.ips', compact('ips'));
+    }
+
+    //获取搜索记录
+    public function history()
+    {
+        //是否有操作权限
+        if (Gate::denies('admin', 4)) {
+            abort(403);
+        }
+        $historys = Searchistory::paginate(4);
+        return view('admin.history', ['historys' => $historys]);
+    }
+
+    //删除搜索记录
+    public function historydel()
+    {
+        //是否有操作权限
+        if (Gate::denies('admin', 4)) {
+            abort(403);
+        }
+        $id = Input::get('id');
+        $result = Searchistory::destroy($id);
+        if ($result) {
+            echo true;
+        } else {
+            echo false;
+        }
     }
 
     //图片上传
