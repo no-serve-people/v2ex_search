@@ -15,6 +15,7 @@ class IpRepository extends Repository
      */
     public function createIfNotExisted($request)
     {
+        //todo:思考如何保存IP
         $ip = Ip::find($request->ip());
         $user_id = auth()->id();
         if ($ip == null) {

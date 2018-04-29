@@ -56,8 +56,8 @@
                         <input value="{{ $userInfo->auth }}" id="auth_num" type="hidden">
                         <div class="col-sm-10">
                             <select class="form-control" name="auth" id="auth">
-                                <option value="0">读者</option>
-                                <option value="1">作者</option>
+                                <option value="0">普通用户</option>
+                                <option value="1">授权用户</option>
                                 <option value="5">管理员</option>
                             </select>
                         </div>

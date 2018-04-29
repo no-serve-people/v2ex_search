@@ -40,6 +40,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
      */
     Route::delete('/ip/{ip}/toggle', ['uses' => 'IpController@toggleBlock', 'as' => 'ip.block']);
     Route::delete('/ip/{ip}', ['uses' => 'IpController@destroy', 'as' => 'ip.delete']);
+    /*Route::delete('/ip/{ip}/toggle', 'IpController@toggleBlock')->name('ip.block');
+    Route::delete('/ip/{ip}', 'IpController@destroy')->name('ip.delete');*/
     // 密码重置路由
     Route::get('password/reset/{token}', 'Auth\PasswordController@getReset');
     Route::post('password/reset', 'Auth\PasswordController@postReset');

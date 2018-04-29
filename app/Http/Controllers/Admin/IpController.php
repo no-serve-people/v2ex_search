@@ -38,9 +38,9 @@ class IPController extends Controller
             return back()->withErrors("UnBlocked $ip->id firstly.");
         }
 
-        if (($count = $ip->comments()->withTrashed()->count()) > 0) {
+        /*if (($count = $ip->comments()->withTrashed()->count()) > 0) {
             return back()->withErrors("$ip->id has $count comments.Please remove theme first.");
-        }
+        }*/
         if ($ip->delete())
             return back()->with('success', "Delete $ip->id successfully.");
         return back()->withErrors("Blocked $ip->id failed.");

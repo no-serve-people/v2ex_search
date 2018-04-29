@@ -3,7 +3,7 @@
     <div id="particles" class="home-color-bg"></div>
     <div class="home-box">
         <h2 title="{{ $site_title or 'title' }}" style="margin: 0;">
-            {{ $site_title or '空虚公子' }}
+            {{ $site_title or '毕业设计' }}
             <a aria-hidden="true" href="">
                 <img class="img-circle"
                      src="{{ $avatar or 'https://raw.githubusercontent.com/lufficc/images/master/Xblog/logo.png' }}"

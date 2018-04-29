@@ -40,7 +40,12 @@ class ImportPosts extends Command
     public function handle()
     {
         $client = new Client();
-        foreach (config('post-urls') as $url) {
+        //第一种方法:在配置文件中直接添加urls
+//        foreach (config('post-urls') as $url) {
+        //第二种方法，后台管理添加数据
+        //如果你想要获取包含单个字段值的集合，可以使用 pluck 方法。在下面的例子中，我们将取出 roles 表中 title 字段的集合：
+        $urls = \DB::table('wxurls')->pluck('url');
+        foreach ($urls as $url) {
             /**
              * 这里 url 可能需要索引，但是用 url 做唯一标示不太好，索引太大
              */

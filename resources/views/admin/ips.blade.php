@@ -13,7 +13,7 @@
                 </div>
                 <div class="widget-body">
                     @if($ips->isEmpty())
-                        <div style="text-align: center;"> -_- NO IP.</div>
+                        <div style="text-align: center;"> 暂无IP信息</div>
                     @else
                         <table class="table table-hover table-striped table-bordered table-responsive"
                                style="overflow: auto">
@@ -30,10 +30,10 @@
                                     <td>{{ $ip->id }}</td>
                                     @if($ip->user)
                                         <td>
-                                            <a href="{{ route('user.show',$ip->user->name) }}">{{ $ip->user->name }}</a>
-                                            @if(isAdminById($ip->user_id))
+                                            {{--<a href="{{ route('user.show',$ip->user->name) }}">{{ $ip->user->name }}</a>--}}
+                                            {{--@if(isAdminById($ip->user_id))--}}
                                                 <span class="role-label">Admin</span>
-                                            @endif
+                                            {{--@endif--}}
                                         </td>
                                     @else
                                         <td>NONE</td>

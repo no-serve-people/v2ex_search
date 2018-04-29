@@ -10,11 +10,6 @@ class Ip extends Model
     protected $fillable = ['id', 'user_id'];
     public $incrementing = false;
 
-    public function comments()
-    {
-        return $this->hasMany(Comment::class);
-    }
-
     public function user()
     {
         return $this->belongsTo(User::class);

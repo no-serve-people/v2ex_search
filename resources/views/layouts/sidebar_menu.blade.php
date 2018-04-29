@@ -108,7 +108,7 @@
                 </ul>
             </li>
 
-            <li>
+          {{--  <li>
                 <a href="#">
                     <i class="linecons-search"></i>
                     <span class="title">搜索</span>
@@ -120,7 +120,7 @@
                         </a>
                     </li>
                 </ul>
-            </li>
+            </li>--}}
 
             <li>
                 <a href="#">
@@ -162,7 +162,7 @@
                         <span class="title">爬虫设置</span>
                     </a>
                     <ul>
-                        <li class="active">
+                      {{--  <li class="active">
                             <a href="{{ url('admin/spiderlist') }}">
                                 <span class="title">爬虫列表</span>
                             </a>
@@ -171,7 +171,7 @@
                             <a href="{{ url('admin/spiderstart') }}">
                                 <span class="title">启动爬虫</span>
                             </a>
-                        </li>
+                        </li>--}}
                         <li class="active">
                             <a href="{{ url('admin/urladd') }}">
                                 <span class="title">url增加</span>
@@ -180,7 +180,7 @@
                     </ul>
                 </li>
 
-                <li>
+              {{--  <li>
                     <a href="#">
                         <i class="linecons-trash"></i>
                         <span class="title">elasticsear设置</span>
@@ -202,7 +202,7 @@
                             </a>
                         </li>
                     </ul>
-                </li>
+                </li>--}}
 
                 <li class="has-sub">
                     <a href="#">
@@ -215,7 +215,7 @@
                                 <span class="title">SEO设置</span>
                             </a>
                         </li>
-                        <li class="active">
+                    {{--    <li class="active">
                             <a href="{{ url('admin/ik') }}">
                                 <span class="title">分词设置</span>
                             </a>
@@ -224,7 +224,7 @@
                             <a href="{{ url('admin/search') }}">
                                 <span class="title">搜索设置</span>
                             </a>
-                        </li>
+                        </li>--}}
                     </ul>
                 </li>
 

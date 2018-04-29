@@ -22,19 +22,19 @@
     </script>
 </head>
 <body>
-@include('admin.layouts.header')
+{{--@include('admin.layouts.header')--}}
 <div id="content-wrap">
     <div class="container">
-        @include('admin.partials.errors')
-        @include('admin.partials.success')
+        {{--@include('admin.partials.errors')
+        @include('admin.partials.success')--}}
         @yield('content')
     </div>
 </div>
-@include('admin.layouts.footer')
+{{--@include('admin.layouts.footer')--}}
 @if(isset($site_js) && $site_js)
     <script src="{{ $site_js }}"></script>
 @else
-    <script src="{{ elixir('js/app.js') }}"></script>
+    <script src="{{ elixir('js/ips/app.js') }}"></script>
 @endif
 @yield('script')
 </body>

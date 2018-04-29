@@ -77,6 +77,7 @@ return [
     'elasticsearch' => [
         'index' => env('ELASTICSEARCH_INDEX', 'zmu_rmrb_search'),
         'hosts' => [
+//            env('ELASTICSEARCH_HOST', 'http://localhost'),
             env('ELASTICSEARCH_HOST', 'http://localhost'),
         ],
     ],
