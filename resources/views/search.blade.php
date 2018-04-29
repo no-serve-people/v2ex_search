@@ -30,12 +30,12 @@
                             <i class="fa fa-search"></i> 关于 “<span style="color: red"
                                                                    class="highlight"><strong>{{ $q }}</strong></span>”
                             的搜索结果,
-                            共 {{ $paginator->total() }} 条
+                            共 {{ $posts->total() }} 条
                         </h3>
                     </div>
 
                     <div class="panel-body ">
-                        @foreach($paginator as $post)
+                        @foreach($posts as $post)
                             <div class="result">
                                 <h2 class="title">
                                     <a href="{{ $post->url }}" target="_blank">
@@ -76,7 +76,7 @@
                             </div>
                         @endforeach
                     </div>
-                    {{ $paginator->links() }}
+                    {{ $posts->appends(['s_type'=>$type])->links() }}
                 </div>
             </div>
         </div>

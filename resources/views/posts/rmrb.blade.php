@@ -11,12 +11,12 @@
                 <div class="panel-heading">
                     <h3 class="panel-title ">
                         <i class="fa fa-search"></i>"人民日报"共有“<span
-                                class="highlight">{{ $paginator->total() }}</span>” 篇文章，按时间排序,
+                                class="highlight">{{ $posts->total() }}</span>” 篇文章，按时间排序,
                     </h3>
                 </div>
 
                 <div class="panel-body ">
-                    @foreach($paginator as $post)
+                    @foreach($posts as $post)
                         <div class="result">
                             <h2 class="title">
                                 <a href="{{ $post->url }}" target="_blank">
@@ -50,7 +50,7 @@
                         </div>
                     @endforeach
                 </div>
-                {{ $paginator->links() }}
+                {{ $posts->links() }}
             </div>
         </div>
     </div>

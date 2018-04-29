@@ -47,6 +47,12 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
      */
     Route::get('history', 'AdminController@history');
     Route::get('historydel', 'AdminController@historydel');
+    /**
+     * url配置
+     */
+    Route::post('urllist', 'UrlController@index');
+    Route::post('urladd', 'UrlController@add');
+
     // 密码重置路由
     Route::get('password/reset/{token}', 'Auth\PasswordController@getReset');
     Route::post('password/reset', 'Auth\PasswordController@postReset');
