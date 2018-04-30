@@ -1,4 +1,3 @@
-
 @extends('layouts.admin')
 @section('css')
 
@@ -8,7 +7,7 @@
 
     <div class="panel panel-default">
         <div class="panel-heading">
-            <h3 class="panel-title">搜索记录列表</h3>
+            <h3 class="panel-title">url列表</h3>
 
             <div class="panel-options">
                 <a href="#" data-toggle="panel">
@@ -28,7 +27,7 @@
                         <span aria-hidden="true">×</span>
                         <span class="sr-only">关闭</span>
                     </button>
-                    <strong>成功了！</strong>你已经成功删除该搜索记录
+                    <strong>成功了！</strong>你已经成功删除url
                 </div>
             </div>
         </div>
@@ -40,15 +39,14 @@
                         <span aria-hidden="true">×</span>
                         <span class="sr-only">关闭</span>
                     </button>
-                    <strong>失败了！</strong>删除搜索记录失败
+                    <strong>失败了！</strong>删除url失败
                 </div>
             </div>
         </div>
 
         <div class="panel-body">
             <script type="text/javascript">
-                jQuery(document).ready(function($)
-                {
+                jQuery(document).ready(function ($) {
                     $("#example-2").dataTable({
                         dom: "t" + "<'row'<'col-xs-6'i><'col-xs-6'p>>",
                         aoColumns: [
@@ -65,25 +63,26 @@
                 <thead>
                 <tr>
                     <th>编号</th>
-                    <th>历史记录</th>
-                    <th>类型</th>
-                    <th>时间</th>
+                    <th>公众号</th>
+                    <th>链接地址</th>
                     <th>操作</th>
                 </tr>
                 </thead>
 
                 <tbody class="middle-align">
-                @foreach($historys as $history)
+                @foreach($urls as $url)
                     <tr >
-                        <td>{{ $history->id }}</td>
-                        <td>{{ $history->history}}</td>
-                        <td>{{ $history->type }}</td>
-                        <td>{{ $history->created_at  }}</td>
+                        <td>{{ $url->id }}</td>
+                        <td>{{ $url->name }}</td>
+                        <td>{{ $url->url  }}</td>
                         <td>
-                            {{--<a href="{{ url('admin/linkedit') }}/{{ $link->id }}" class="btn btn-secondary btn-sm btn-icon icon-left">
+                            <a href="{{ url('admin/urledit') }}/{{ $url->id }}"
+                               class="btn btn-secondary btn-sm btn-icon icon-left">
                                 编辑
-                            </a>--}}
-                            <a href="javascript:;" onclick="getId({{ $history->id }})" class="btn btn-danger btn-sm btn-icon icon-left" >
+                            </a>
+
+                            <a href="javascript:;" onclick="getId({{ $url->id }})"
+                               class="btn btn-danger btn-sm btn-icon icon-left">
                                 删除
                             </a>
                         </td>
@@ -92,8 +91,10 @@
 
                 </tbody>
             </table>
-            {{$historys->links()}}
-            {{--<button onclick="location.href='{{ url('admin/linkadd') }}'" class="btn btn-info btn-single pull-right">添加链接</button>--}}
+            <button onclick="location.href='{{ url('admin/urladd') }}'" class="btn btn-info btn-single pull-right">
+                添加链接
+            </button>
+
         </div>
     </div>
 
@@ -121,22 +122,23 @@
         </div>
     </div>
     <script type="text/javascript">
-        function getId(id){
+        function getId(id) {
             $('#linkid').val(id);
             jQuery('#modal-1').modal('show', {backdrop: 'fade'});
         }
-        function deletepost(){
+
+        function deletepost() {
             id = $('#linkid').val();
-            jQuery.get("{{ url('admin/historydel') }}",
+            jQuery.get("{{ url('admin/urldel') }}",
                 {
-                    id:id,
+                    id: id,
                 },
-                function(data){
-                    if(data){
+                function (data) {
+                    if (data) {
                         $('#modal_hide').click();
-                        jQuery('#tr_'+id).remove();
+                        jQuery('#tr_' + id).remove();
                         $("#success").show();
-                    }else{
+                    } else {
                         $('#modal_hide').click();
                         $("#danger").show();
                     }

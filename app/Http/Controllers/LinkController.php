@@ -17,7 +17,7 @@ class LinkController extends Controller
             abort(403);
         }
         $links = Link::all();
-        return view('admin.link', ['links' => $links]);
+        return view('admin/links/link', ['links' => $links]);
     }
 
     public function edit($id)
@@ -27,7 +27,7 @@ class LinkController extends Controller
             abort(403);
         }
         $link = Link::find($id);
-        return view('admin.linkEdit', ['link' => $link]);
+        return view('admin/links/linkEdit', ['link' => $link]);
     }
 
     public function add(Request $request)

@@ -1,10 +1,4 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: ADKi
- * Date: 2016/5/3 0003
- * Time: 22:51
- */?>
+
 @extends('layouts.admin')
 
 @section('content')

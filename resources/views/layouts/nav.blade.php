@@ -290,7 +290,7 @@
             <ul class="dropdown-menu user-profile-menu list-unstyled">
                 @if(Auth::user()->auth != 0)
                 <li>
-                    <a href="{{ url('admin/postadd') }}">
+                    <a href="{{ url('admin/urladd') }}">
                         <i class="fa-edit"></i>
                         添加友链
                     </a>
@@ -304,9 +304,9 @@
                 </li>
                 @if(Auth::user()->auth != 0)
                 <li>
-                    <a href="{{ url('admin/uploadFile') }}">
+                    <a href="{{ url('admin/seo') }}">
                         <i class="fa-user"></i>
-                        Seo设置
+                        SEO设置
                     </a>
                 </li>
                 @endif

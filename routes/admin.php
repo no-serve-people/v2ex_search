@@ -26,17 +26,17 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     //友情链接
     Route::get('link', 'LinkController@index');
     Route::get('linkadd', function () {
-        return view('admin.linkAdd');
+        return view('admin.links.linkAdd');
     });
     Route::get('linkdel', 'LinkController@deleteLink');
     Route::get('linkedit/{id}', 'LinkController@edit');
     Route::post('linkadd', 'LinkController@add');
-    //SEO
+    //SEO设置
     Route::get('seo', 'SeoController@index');
     Route::post('seo/save', 'SeoController@save');
     Route::get('seo/edit', 'SeoController@edit');
     /**
-     * IPS
+     * IPS设置
      */
     Route::delete('/ip/{ip}/toggle', ['uses' => 'IpController@toggleBlock', 'as' => 'ip.block']);
     Route::delete('/ip/{ip}', ['uses' => 'IpController@destroy', 'as' => 'ip.delete']);
@@ -50,9 +50,15 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     /**
      * url配置
      */
-    Route::post('urllist', 'UrlController@index');
+    /* Route::post('urllist', 'UrlController@index');
+     Route::post('urladd', 'UrlController@add');*/
+    Route::get('urllist', 'UrlController@index');
+    Route::get('urladd', function () {
+        return view('admin/urls/urladd');
+    });
+    Route::get('urldel', 'UrlController@delete');
+    Route::get('urledit/{id}', 'UrlController@edit');
     Route::post('urladd', 'UrlController@add');
-
     // 密码重置路由
     Route::get('password/reset/{token}', 'Auth\PasswordController@getReset');
     Route::post('password/reset', 'Auth\PasswordController@postReset');
