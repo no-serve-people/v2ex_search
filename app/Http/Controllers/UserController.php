@@ -12,7 +12,7 @@ use App\Services\UploadsManager;
 
 class UserController extends Controller
 {
-    //
+    //todo解决上传头像问题
     protected $manager;
 
     public function __construct(UploadsManager $manager)
@@ -28,19 +28,20 @@ class UserController extends Controller
     }
 
     //上传头像
-    public function UpAvatar(Request $request){
-        $file =  $_FILES['file'];
-        $suffix_arr = explode('.',$file['name']);
-        $fileName = date('Y-m-d-h_i_sa').'.'.$suffix_arr[count($suffix_arr)-1];
-        $path = 'avatar/'.$fileName;
+    public function UpAvatar(Request $request)
+    {
+        $file = $_FILES['file'];
+        $suffix_arr = explode('.', $file['name']);
+        $fileName = date('Y-m-d-h_i_sa') . '.' . $suffix_arr[count($suffix_arr) - 1];
+        $path = 'avatar/' . $fileName;
         $content = File::get($file['tmp_name']);
         $result = $this->manager->saveFile($path, $content);
         if ($result === true) {
             $model_user = User::find(Auth::user()->id);
-            $model_user->avatar = 'uploads/'.$path;
+            $model_user->avatar = 'uploads/' . $path;
             $model_user->save();
             echo $this->manager->fileWebpath($path);
-        }else{
+        } else {
             $error = "An error occurred uploading file.";
             echo $error;
         }

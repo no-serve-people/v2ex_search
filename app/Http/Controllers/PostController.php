@@ -9,7 +9,6 @@ class PostController extends Controller
 {
     public function search(Request $request)
     {
-        //todo:解决分页问题
         $q = $request->get('query');
         $type = $request->get('s_type');
         $posts = [];
@@ -22,11 +21,11 @@ class PostController extends Controller
             );
             if ($type == "wx") {
                 //微信公众号
-                $posts = Post::search($q)->paginate(5);
+                $posts = Post::search($q)->paginate(4);
             }
             else{
                 //V2ex按照时间排序
-                $posts = V2ex::search($q)->paginate(5);
+                $posts = V2ex::search($q)->paginate(4);
             }
         }
 
