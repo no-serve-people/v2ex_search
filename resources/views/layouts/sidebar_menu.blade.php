@@ -88,7 +88,7 @@
             @endif
 
             <li>
-                <a href="#">
+                <a href="admin">
                     <i class="linecons-user"></i>
                     <span class="title">用户</span>
                 </a>
@@ -109,7 +109,7 @@
             </li>
 
             <li>
-                <a href="#">
+                <a href="admin">
                     <i class="linecons-search"></i>
                     <span class="title">搜索</span>
                 </a>
@@ -123,7 +123,7 @@
             </li>
 
             <li>
-                <a href="#">
+                <a href="admin">
                     <i class="linecons-inbox"></i>
                     <span class="title">访客记录</span>
                 </a>
@@ -138,7 +138,7 @@
 
             @if(Auth::user()->auth == 5)
                 <li>
-                    <a href="#">
+                    <a href="admin">
                         <i class="linecons-pencil"></i>
                         <span class="title">友情链接</span>
                     </a>
@@ -157,7 +157,7 @@
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="admin">
                         <i class="linecons-camera"></i>
                         <span class="title">微信爬虫设置</span>
                     </a>
@@ -208,7 +208,7 @@
                   </li>--}}
 
                 <li class="has-sub">
-                    <a href="#">
+                    <a href="admin">
                         <i class="linecons-cloud"></i>
                         <span class="title">设置</span>
                     </a>

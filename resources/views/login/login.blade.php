@@ -1,11 +1,4 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: ADKi
- * Date: 2016/4/5 0005
- * Time: 18:33
- */?>
-        <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -15,7 +8,7 @@
     <meta name="description" content="Xenon Boostrap Admin Panel" />
     <meta name="author" content="" />
 
-    <title>Xenon - Login</title>
+    <title>氢搜索后台- Login</title>
 
     <link rel="stylesheet" href="http://fonts.lug.ustc.edu.cn/css?family=Arimo:400,700,400italic">
     <link rel="stylesheet" href="{{ asset('assets/css/fonts/linecons/css/linecons.css') }}">
@@ -90,7 +83,7 @@
             </script>
 
             <!-- Errors container -->
-            @if ($errors->has('email'))
+          {{--  @if ($errors->has('email'))
             <script style="text/javascript">
                 $(function () {
                     var opts = {
@@ -114,7 +107,8 @@
             <div class="errors-container">
 
             </div>
-            @endif
+            @endif--}}
+
 
             <!-- Add class "fade-in-effect" for login form effect -->
             <form method="post" role="form" id="login" action="{{ url('/login') }}" class="login-form fade-in-effect">
@@ -139,7 +133,7 @@
                     <label class="control-label" for="password">密码</label>
                     <input type="password" class="form-control input-dark" name="password" id="password" autocomplete="off" />
                 </div>
-
+                @include("errors.error")
                 <div class="form-group">
                     <button type="submit" class="btn btn-dark  btn-block text-left">
                         <i class="fa-lock"></i>

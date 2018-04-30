@@ -10,7 +10,8 @@
                 <div class="user-info-sidebar">
 
                     <a href="#" class="user-img">
-                        <img src="@if($user->avatar){{ asset($user->avatar) }}@else{{ asset('assets/images/user-4.png') }}@endif" alt="user-img" class="img-cirlce img-responsive img-thumbnail" id="avatar" />
+                        <img src="@if($user->avatar){{ asset($user->avatar) }}@else{{ asset('assets/images/user-4.png') }}@endif"
+                             alt="user-img" class="img-cirlce img-responsive img-thumbnail" id="avatar"/>
                     </a>
 
                     <a href="#" class="user-name">
@@ -22,7 +23,7 @@
 								{{ $user->position }} at <strong>{{ $user->company }}</strong>
 							</span>
 
-                    <hr />
+                    <hr/>
 
                     <ul class="list-unstyled user-info-list">
                         <li>
@@ -39,7 +40,7 @@
                         </li>
                     </ul>
 
-                    <hr />
+                    <hr/>
 
                     {{--<ul class="list-unstyled user-friends-count">
                         <li>
@@ -53,7 +54,7 @@
                     </ul>--}}
 
                     <button type="button" class="btn btn-success btn-block text-left">
-                        角色：@if($user->auth == 5) 管理员 @elseif($user->auth == 2) 作者 @else 读者 @endif
+                        角色：@if($user->auth == 5) 管理员 @elseif($user->auth == 2) 普通用户 @else 游客 @endif
                     </button>
                 </div>
 
@@ -79,26 +80,23 @@
                             {!! csrf_field() !!}
 
                             <script type="text/javascript">
-                                jQuery(document).ready(function($)
-                                {
+                                jQuery(document).ready(function ($) {
                                     var i = 1,
                                         $example_dropzone_filetable = $("#example-dropzone-filetable"),
                                         example_dropzone = $("#advancedDropzone").dropzone({
                                             url: '{{ url('admin/upload_avatar') }}',
 
                                             // Events
-                                            addedfile: function(file)
-                                            {
-                                                if(i == 1)
-                                                {
+                                            addedfile: function (file) {
+                                                if (i == 1) {
                                                     $example_dropzone_filetable.find('tbody').html('');
                                                 }
 
-                                                var size = parseInt(file.size/1024, 10);
-                                                size = size < 1024 ? (size + " KB") : (parseInt(size/1024, 10) + " MB");
+                                                var size = parseInt(file.size / 1024, 10);
+                                                size = size < 1024 ? (size + " KB") : (parseInt(size / 1024, 10) + " MB");
 
-                                                var	$el = $('<tr><td><div class="progress progress-striped"><div class="progress-bar progress-bar-warning"></div></div></td>\
-													<td>'+size+'</td>\
+                                                var $el = $('<tr><td><div class="progress progress-striped"><div class="progress-bar progress-bar-warning"></div></div></td>\
+													<td>' + size + '</td>\
 													<td>上传中...</td>\
 												</tr>');
 
@@ -107,21 +105,18 @@
                                                 file.progressBar = $el.find('.progress-bar');
                                             },
 
-                                            uploadprogress: function(file, progress, bytesSent)
-                                            {
+                                            uploadprogress: function (file, progress, bytesSent) {
                                                 file.progressBar.width(progress + '%');
                                             },
 
-                                            success: function(file,date)
-                                            {
+                                            success: function (file, date) {
                                                 file.fileEntryTd.find('td:last').html('<span class="text-success">成功</span>');
                                                 file.progressBar.removeClass('progress-bar-warning').addClass('progress-bar-success');
-                                                $('#avatar').attr('src',date);
+                                                $('#avatar').attr('src', date);
 
                                             },
 
-                                            error: function(file)
-                                            {
+                                            error: function (file) {
                                                 file.fileEntryTd.find('td:last').html('<span class="text-danger">失败</span>');
                                                 file.progressBar.removeClass('progress-bar-warning').addClass('progress-bar-red');
                                             }
@@ -134,7 +129,7 @@
                                 });
                             </script>
 
-                            <br />
+                            <br/>
                             <div class="row">
                                 <div class="col-sm-3 text-center">
                                     <div id="advancedDropzone" class="droppable-area">
@@ -167,7 +162,8 @@
                                 <label class="col-sm-2 control-label" for="field-1">邮箱</label>
 
                                 <div class="col-sm-10">
-                                    <input type="email" class="form-control" id="field-1" value="{{ $user->email }}" disabled>
+                                    <input type="email" class="form-control" id="field-1" value="{{ $user->email }}"
+                                           disabled>
                                     <p class="help-block">登录账号，不可修改！</p>
                                 </div>
                             </div>
@@ -178,7 +174,8 @@
                                 <label class="col-sm-2 control-label" for="field-2">用户名</label>
 
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="field-2" name="name" value="{{ $user->name }}" placeholder="显示的昵称">
+                                    <input type="text" class="form-control" id="field-2" name="name"
+                                           value="{{ $user->name }}" placeholder="显示的昵称">
                                 </div>
                             </div>
 
@@ -190,11 +187,13 @@
                                 <div class="col-sm-10">
                                     <p>
                                         <label class="radio-inline">
-                                            <input type="radio" name="sex" value="1" @if($user->sex == 1) checked @endif>
+                                            <input type="radio" name="sex" value="1"
+                                                   @if($user->sex == 1) checked @endif>
                                             男
                                         </label>
                                         <label class="radio-inline">
-                                            <input type="radio" name="sex" value="2" @if($user->sex == 2) checked @endif>
+                                            <input type="radio" name="sex" value="2"
+                                                   @if($user->sex == 2) checked @endif>
                                             女
                                         </label>
                                     </p>
@@ -210,7 +209,8 @@
 										<span class="input-group-addon">
 											<i class="fa-calendar"></i>
 										</span>
-                                    <input class="form-control" data-mask="date" id="field-4" type="text" name="birthday" value="{{ $user->birthday }}">
+                                    <input class="form-control" data-mask="date" id="field-4" type="text"
+                                           name="birthday" value="{{ $user->birthday }}">
                                 </div>
 
                             </div>
@@ -221,7 +221,8 @@
                                 <label class="col-sm-2 control-label" for="field-5">我的大学</label>
 
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="field-5" value="{{ $user->university }}" name="university" placeholder="大学名称">
+                                    <input type="text" class="form-control" id="field-5" value="{{ $user->university }}"
+                                           name="university" placeholder="大学名称">
                                 </div>
                             </div>
 
@@ -231,7 +232,8 @@
                                 <label class="col-sm-2 control-label" for="field-6">我的公司</label>
 
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="field-6" value="{{ $user->company }}" name="company" placeholder="公司名称">
+                                    <input type="text" class="form-control" id="field-6" value="{{ $user->company }}"
+                                           name="company" placeholder="公司名称">
                                 </div>
                             </div>
 
@@ -241,7 +243,8 @@
                                 <label class="col-sm-2 control-label" for="field-7">我的职位</label>
 
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="field-7" name="position" value="{{ $user->position }}" placeholder="公司职位">
+                                    <input type="text" class="form-control" id="field-7" name="position"
+                                           value="{{ $user->position }}" placeholder="公司职位">
                                 </div>
                             </div>
 
@@ -251,7 +254,8 @@
                                 <label class="col-sm-2 control-label" for="field-8">个人网站</label>
 
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="field-8" name="url" value="{{ $user->url }}" placeholder="网址">
+                                    <input type="text" class="form-control" id="field-8" name="url"
+                                           value="{{ $user->url }}" placeholder="网址">
                                 </div>
                             </div>
 
@@ -261,7 +265,8 @@
                                 <label class="col-sm-2 control-label" for="field-9">QQ</label>
 
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="field-9" name="qq" value="{{ $user->qq }}" placeholder="QQ">
+                                    <input type="text" class="form-control" id="field-9" name="qq"
+                                           value="{{ $user->qq }}" placeholder="QQ">
                                 </div>
                             </div>
 
@@ -271,7 +276,8 @@
                                 <label class="col-sm-2 control-label" for="field-10">我的签名</label>
 
                                 <div class="col-sm-10">
-                                    <textarea class="form-control" cols="5" id="field-10" name="autograph">{{ $user->autograph }}</textarea>
+                                    <textarea class="form-control" cols="5" id="field-10"
+                                              name="autograph">{{ $user->autograph }}</textarea>
                                 </div>
                             </div>
 

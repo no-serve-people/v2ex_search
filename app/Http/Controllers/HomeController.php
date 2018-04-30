@@ -13,6 +13,6 @@ class HomeController extends Controller
 
     public function about()
     {
-        //todo:
+        return view('about');
     }
 }

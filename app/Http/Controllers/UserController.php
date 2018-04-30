@@ -19,11 +19,14 @@ class UserController extends Controller
     {
         $this->manager = $manager;
     }
+
     //信息首页
-    public function index(){
+    public function index()
+    {
         $user = Auth::user();
-        return view('admin.profile',compact('user'));
+        return view('admin.profile', compact('user'));
     }
+
     //上传头像
     public function UpAvatar(Request $request){
         $file =  $_FILES['file'];
@@ -42,8 +45,11 @@ class UserController extends Controller
             echo $error;
         }
     }
+
+
     //保存用户信息
-    public function saveInfo(Request $request){
+    public function saveInfo(Request $request)
+    {
         $user = User::find(Auth::user()->id);
         $user->name = $request->input('name');
         $user->sex = $request->input('sex');
@@ -57,13 +63,15 @@ class UserController extends Controller
         $user->save();
         return redirect('admin/profile');
     }
+
     //ajax删除
-    public function deleteUser(){
+    public function deleteUser()
+    {
         $id = Input::get('id');
         $result = User::destroy($id);
-        if($result){
+        if ($result) {
             echo true;
-        }else{
+        } else {
             echo false;
         }
     }
