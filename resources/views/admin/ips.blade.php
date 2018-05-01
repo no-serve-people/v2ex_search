@@ -1,5 +1,7 @@
-@extends('admin.layouts.app')
-@section('title','IPs')
+@extends('layouts.admin')
+@section('css')
+
+@endsection
 @section('content')
     <div class="row">
         <div class="col-md-12">
@@ -56,4 +58,12 @@
             </div>
         </div>
     </div>
+    <!-- Imported styles on this page -->
+    <link rel="stylesheet" href="{{ asset('assets/js/datatables/dataTables.bootstrap.css') }}">
+    <script src="{{ asset('assets/js/datatables/js/jquery.dataTables.min.js') }}"></script>
+    <!-- Imported scripts on this page -->
+    <script src="{{ asset('assets/js/datatables/dataTables.bootstrap.js') }}"></script>
+    <script src="{{ asset('assets/js/datatables/yadcf/jquery.dataTables.yadcf.js') }}"></script>
+    <script src="{{ asset('assets/js/datatables/tabletools/dataTables.tableTools.min.js') }}"></script>
+
 @endsection

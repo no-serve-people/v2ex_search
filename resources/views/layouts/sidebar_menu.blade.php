@@ -122,19 +122,21 @@
                 </ul>
             </li>
 
-            <li>
-                <a href="admin">
-                    <i class="linecons-inbox"></i>
-                    <span class="title">访客记录</span>
-                </a>
-                <ul>
-                    <li class="active">
-                        <a href="{{ url('admin/ips') }}">
-                            <span class="title">IP地址</span>
-                        </a>
-                    </li>
-                </ul>
-            </li>
+            @if(Auth::user()->auth == 5)
+                <li>
+                    <a href="admin">
+                        <i class="linecons-inbox"></i>
+                        <span class="title">访客记录</span>
+                    </a>
+                    <ul>
+                        <li class="active">
+                            <a href="{{ url('admin/ips') }}">
+                                <span class="title">IP地址</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            @endif
 
             @if(Auth::user()->auth == 5)
                 <li>

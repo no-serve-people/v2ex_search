@@ -12,7 +12,6 @@ use App\Services\UploadsManager;
 
 class UserController extends Controller
 {
-    //todo:解决上传头像问题
     protected $manager;
 
     public function __construct(UploadsManager $manager)
