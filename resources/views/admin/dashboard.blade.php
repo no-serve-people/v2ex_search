@@ -491,15 +491,6 @@
     <div class="row">
         <div class="col-sm-12">
 
-            {{--  <div class="xe-widget xe-counter" data-count=".num" data-from="0" data-to="" data-suffix="个" data-duration="2">
-                  <div class="xe-icon">
-                      <i class="linecons-cloud"></i>
-                  </div>
-                 --}}{{-- <div class="xe-label">
-                      <strong class="num">0个</strong>
-                      <span>爬虫总数</span>
-                  </div>--}}{{--
-              </div>--}}
             @if(Auth::user()->auth == 5)
 
                 <div class="xe-widget xe-counter xe-counter-orange" data-count=".num" data-from="0"
@@ -547,7 +538,7 @@
                 </div>
             </div>
 
-            <div class="xe-widget xe-counter xe-counter-info" data-count=".num" data-from="1" data-to=""
+            <div class="xe-widget xe-counter xe-counter-info" data-count=".num" data-from="1" data-to="1"
                  data-duration="4" data-suffix="人次" data-easing="true">
                 <div class="xe-icon">
                     <i class="linecons-star"></i>
