@@ -14,6 +14,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('dashboard', 'AdminController@getDashboard');
     Route::get('useredit/{id}', 'AdminController@getUserEdit');
     Route::post('authsave', 'AdminController@setUserAuth');
+
     //ip路由
     Route::get('/ips', ['uses' => 'AdminController@ips', 'as' => 'admin.ips']);
 
@@ -59,6 +60,11 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('urldel', 'UrlController@delete');
     Route::get('urledit/{id}', 'UrlController@edit');
     Route::post('urladd', 'UrlController@add');
+    //文件上传
+    Route::post('upload/file', 'UploadController@uploadFile');
+    Route::delete('upload/file', 'UploadController@deleteFile');
+    Route::post('upload/folder', 'UploadController@createFolder');
+    Route::delete('upload/folder', 'UploadController@deleteFolder');
     // 密码重置路由
     Route::get('password/reset/{token}', 'Auth\PasswordController@getReset');
     Route::post('password/reset', 'Auth\PasswordController@postReset');

@@ -12,7 +12,7 @@ use App\Services\UploadsManager;
 
 class UserController extends Controller
 {
-    //todo解决上传头像问题
+    //todo:解决上传头像问题
     protected $manager;
 
     public function __construct(UploadsManager $manager)
