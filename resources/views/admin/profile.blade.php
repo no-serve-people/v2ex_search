@@ -74,6 +74,7 @@
                             </a>
                         </div>
                     </div>
+                    @include('errors.error');
                     <div class="panel-body">
 
                         <form role="form" class="form-horizontal" action="{{ url('admin/user_info') }}" method="post">

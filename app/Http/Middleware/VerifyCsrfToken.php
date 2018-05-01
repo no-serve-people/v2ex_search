@@ -12,7 +12,10 @@ class VerifyCsrfToken extends Middleware
      * @var array
      */
     protected $except = [
-        //禁用了csrf(主要避免ajax上传头像出现419报错)
-        '*'
+        //禁用了csrf(主要避免ajax上传头像出现419(csrf)报错)
+//        '*',//禁用所有中间件csrf
+        'admin/upload/image',
+        'admin/uploadFile',
+        'admin/upload_avatar',
     ];
 }

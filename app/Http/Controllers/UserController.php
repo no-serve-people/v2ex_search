@@ -62,7 +62,7 @@ class UserController extends Controller
         $user->position = $request->input('position');
         $user->autograph = $request->input('autograph');
         $user->save();
-        return redirect('admin/profile');
+        return redirect('admin/profile')->withErrors("更新成功");
     }
 
     //ajax删除
