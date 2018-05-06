@@ -69,7 +69,7 @@ class AdminController extends Controller
 
     public function ips(Request $request)
     {
-        //todo:  ip  待做
+        //todo:
         $ips = Ip::withoutGlobalScopes()->with(['user'])->orderBy('user_id', 'id')->paginate(5);
         return view('admin.ips', compact('ips'));
     }

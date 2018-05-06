@@ -89,8 +89,8 @@
     </footer>
 </div>
 <!-- Scripts -->
-<script src="http://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
-<script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/global.js"></script>
 <script>
@@ -174,5 +174,5 @@
 </script>
 <link href="{{ elixir('css/index.css') }}" rel="stylesheet">
 </body>
-<script charset="UTF-8" src="http://www.92find.com/inteltip.js"></script>
+<script charset="UTF-8" src="js/inteltip.js"></script>
 </html>

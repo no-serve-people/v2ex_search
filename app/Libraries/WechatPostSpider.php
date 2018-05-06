@@ -11,6 +11,36 @@ class WechatPostSpider
      */
     protected $crawler;
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     /**
      * @var string
      */

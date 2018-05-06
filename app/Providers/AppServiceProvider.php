@@ -17,7 +17,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Schema::defaultStringLength(191);
-        //替换掉 Scout 的 Engine 为我们创建的 EsEngine
+        //替换掉 Scout 的 Engine 为新创建的 EsEngine
         resolve(EngineManager::class)->extend('es', function ($app) {
             return new EsEngine(ElasticBuilder::create()
                 ->setHosts(config('scout.elasticsearch.hosts'))
